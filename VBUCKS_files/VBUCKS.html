@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;900&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css2.css">
+</head>
+<body>
+
+    <center>
+        <div class="container">
+            <img src="img.jpg" class="logo">
+
+            <h1>Claim Your Card</h1>
+
+            <div id="box-input">
+                <div class="input-container">
+                    <input id="text" minlength="3" maxlength="16" placeholder="Enter Username" class="form__input" required="">
+                    <img src="Accept Button Graphic.JPG" class="accept-btn" onclick="step2()" alt="Accept">
+                </div>
+            </div>
+
+            <div id="username-display" style="display: none;">
+                <p class="username-label">Username:</p>
+                <h1 class="username-output">@<span id="username-value"></span></h1>
+            </div>
+
+            <div class="text1">
+                SELECT YOUR CARD, DOWNLOAD THE APP & ADD @GiftBrys. BOOM! ENJOY YOUR PRIVATE CARD!
+            </div>
+
+            <div class="offers">
+                <div class="offer-wrapper">
+                    <a class="btn offer-btn offer-text gradient responsive-width strike-tooltip" target="_blank" rel="noreferrer" href="https://swcapp.com/i/codebryson" title="Download and run">$100 Roblox Giftcard</a>
+                    <a class="btn offer-btn offer-text gradient responsive-width strike-tooltip" target="_blank" rel="noreferrer" href="https://swcapp.com/i/codebryson" title="Download and run">13,500 V-Bucks Giftcard</a>
+                    <a class="btn offer-btn offer-text gradient responsive-width strike-tooltip" target="_blank" rel="noreferrer" href="https://swcapp.com/i/codebryson" title="Download and run">$150 Playstation Giftcard</a>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        function step2() {
+            var username = document.getElementById("text").value.trim();
+            if (username.length > 0) {
+                document.getElementById("username-value").textContent = username;
+                document.getElementById("username-display").style.display = "block";
+                document.getElementById("box-input").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
